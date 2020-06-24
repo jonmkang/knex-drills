@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require test/setup.js",
-    "start": "node src/practice.js",
+    "test": "mocha ./test/shopping-list-service.spec.js",
+    "start": "node src/blogful.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master"
   },
@@ -13,13 +13,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.23.0",
     "knex": "^0.21.1",
+    "mocha": "^8.0.1",
     "morgan": "^1.10.0",
-    "pg": "^8.2.1"
+    "pg": "^8.2.1",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
